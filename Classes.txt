@@ -1,28 +1,5 @@
-"""
-Exercício com abstração, herança, encapsulamento e polimorfismo
-Cria um sistema bancário (extremamente simples) que tem clientes, contas e 
-um banco. A ideia é que o cliente tenha uma conta(poupança ou corrente) e que possa sacar/depoisistar
-nessa conta. Contas corrente tem um limite extra. Banco tem clientes e contas.
-
-Dicas:
-Criar classe cliente que herda da classe Pessoa (Herança)
-    Pessoa tem nome e idade(com getters)
-    Clientes TEM conta (agregação da classe ContaCorrente ou ContaPoupança)
-Criar classes ContaPoupança e ContaCorre que herdam de Conta
-    ContaCorrente deve ter um limite extra
-    Contas têm agência, número da conta e saldo
-    Contas devem ter método para depósito
-    Conta (super classe) deve ter o método sacar abstrato (abstração e 
-    polimorfismo - as subclasses que implementam o método sacar)
-Criar Classe Banco para AGREGAR classes de clientes e de contas (Agregação)
-Banco será responsável autenticar o cliente e as contas da seguinte maneira:
-    Banco tem contas e clientes (Agregação)
-    * Checar se a agência é daquele banco
-    * Checar se o cliente é daquele banco
-    * Checar se a conta é daquele Banco
-Só será possível sacar se passa na autenticação do banco (descrita acima)
-"""
 from abc import ABC, abstractmethod
+
 
 class Pessoa:
     def __init__(self, nome, idade):
