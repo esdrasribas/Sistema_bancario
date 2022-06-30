@@ -42,7 +42,7 @@ class Conta(ABC):
         pass
 
 class CC(Conta):
-    def __init__(self, agencia, conta, saldo, limite= 200):
+    def __init__(self, agencia, conta, saldo, limite=200):
         super().__init__(agencia,conta,saldo)
         self.limite = limite
     
